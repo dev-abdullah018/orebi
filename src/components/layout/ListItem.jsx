@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 
-function ListItem({itemname}) {
-  return <li>{itemname}</li>
+function ListItem({itemname,className}) {
+  return <li className={className}>{itemname}</li>
 }
 
 ListItem.propTypes={
- itemname: PropTypes.node.isRequired
+ itemname: PropTypes.node.isRequired,
+ className: PropTypes.string.isRequired
 }
 
 export default ListItem;

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-export default function List({children}) {
+export default function List({children,className}) {
   return (
     <>
-      <ul>{children}</ul>
+      <ul className={className}>{children}</ul>
     </>
   )
 }
@@ -11,6 +11,7 @@ export default function List({children}) {
 
 List.propTypes = {
     children: PropTypes.node.isRequired,
+    className: PropTypes.string.isRequired,
   };
 
 

@@ -8,12 +8,12 @@ function App() {
     <div>
       <nav>
         <div className="max-w-container bg-red-600 mx-auto">
-          <Flex>
+          <Flex className='flex'>
             <div className="w-3/12">
               <Image src={logo} alt='orebi' />
             </div>
             <div className="w-9/12">
-              <List>
+              <List className='flex'>
                 <ListItem itemname="Home" /> 
                 <ListItem itemname="Shop"/>
                 <ListItem itemname="About"/>
