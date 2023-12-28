@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-const Dropdown = ({ children, className, titleicon, titletext, onClick }) => {
+const Dropdown = ({ children, className, titleicon, titletext,dropref }) => {
   return (
     <>
-      <div onClick={onClick} className={className}>
+      <div ref={dropref} className={className}>
         <p className="flex gap-3 items-center"><span>{titleicon}</span> {titletext}</p>
         {children}
       </div>
@@ -16,7 +16,7 @@ Dropdown.propTypes = {
   className: PropTypes.string.isRequired,
   titleicon: PropTypes.node.isRequired,
   titletext: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired,
+  dropref: PropTypes.object,
 };
 
 export default Dropdown;
