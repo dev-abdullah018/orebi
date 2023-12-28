@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
 
-const Dropdown = ({ children, className, titleicon, titletext,dropref }) => {
+const Dropdown = ({ children, className, titleicon, titletext, dropref }) => {
   return (
     <>
       <div ref={dropref} className={className}>
-        <p className="flex gap-3 items-center"><span>{titleicon}</span> {titletext}</p>
+        <p className="flex items-center gap-3">
+          <span>{titleicon}</span> {titletext}
+        </p>
         {children}
       </div>
     </>
@@ -20,6 +22,3 @@ Dropdown.propTypes = {
 };
 
 export default Dropdown;
-
-
-
