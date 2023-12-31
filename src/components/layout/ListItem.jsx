@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 function ListItem({ itemname, className, href }) {
@@ -9,10 +8,5 @@ function ListItem({ itemname, className, href }) {
   );
 }
 
-ListItem.propTypes = {
-  itemname: PropTypes.node.isRequired,
-  className: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-};
 
 export default ListItem;

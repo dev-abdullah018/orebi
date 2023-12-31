@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 
 export default function List({children,className}) {
   return (
@@ -8,10 +7,5 @@ export default function List({children,className}) {
   )
 }
 
-
-List.propTypes = {
-    children: PropTypes.node.isRequired,
-    className: PropTypes.string.isRequired,
-  };
 
 
