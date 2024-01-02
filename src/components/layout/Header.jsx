@@ -83,7 +83,7 @@ const Header = () => {
               )}
             </Dropdown>
           </div>
-          <div className="relative w-[600px]">
+          <div className="relative w-auto lg:w-[600px]">
             <Search
               className="w-full px-4 py-5 font-dm text-sm font-normal placeholder:text-[#c4c4c4]"
               placeholder="Search Products"
@@ -146,7 +146,7 @@ const Header = () => {
                       </Link>
                       <Link
                         to="#"
-                        className="mt-3 inline-block border border-solid border-primary bg-primary px-10 py-4 font-dm text-sm font-bold text-white ml-5"
+                        className="ml-5 mt-3 inline-block border border-solid border-primary bg-primary px-10 py-4 font-dm text-sm font-bold text-white"
                       >
                         Checkout
                       </Link>
