@@ -6,57 +6,66 @@ import List from "./List";
 import ListItem from "./ListItem";
 import { useEffect, useRef, useState } from "react";
 import Search from "./Search";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaUser,FaShoppingCart } from "react-icons/fa";
+import { VscTriangleDown } from "react-icons/vsc";
 
 const Header = () => {
-  let [show, setShow] = useState(false);
-  let ref = useRef();
+  let [categoryShow, setCategoryShow] = useState(false);
+  let [userDropDownShow, setUserDropDownShow] = useState(false);
+  let categoryRef = useRef();
+  let userRef = useRef();
 
   useEffect(() => {
     document.body.addEventListener("click", (e) => {
-      if (ref.current.contains(e.target)) {
-        setShow(true);
+      if (categoryRef.current.contains(e.target)) {
+        setCategoryShow(true);
       } else {
-        setShow(false);
+        setCategoryShow(false);
+      }
+
+      if (userRef.current.contains(e.target)) {
+        setUserDropDownShow(true);
+      } else {
+        setUserDropDownShow(false);
       }
     });
   }, []);
   return (
     <div className="bg-[#F5F5F3] py-6">
       <Container>
-        <Flex className="items-center justify-between">
+        <Flex className="flex items-center justify-between">
           <div>
             <Dropdown
-              dropref={ref}
+              dropref={categoryRef}
               titleicon={<HiBars3BottomLeft />}
               titletext="Shop by Category"
               className="relative"
             >
-              {show && (
+              {categoryShow && (
                 <List className="absolute top-8 w-[263px] bg-primary font-dm text-sm font-normal text-[#767676]">
                   <ListItem
                     itemname="Accesories"
-                    className="border border-solid border-[#2D2D2D] px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
+                    className="border-b border-solid border-[#2D2D2D] px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
                   />
                   <ListItem
                     itemname="Furniture"
-                    className="border border-solid border-[#2D2D2D] px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
+                    className="border-b border-solid border-[#2D2D2D] px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
                   />
                   <ListItem
                     itemname="Electronics"
-                    className="border border-solid border-[#2D2D2D] px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
+                    className="border-b border-solid border-[#2D2D2D] px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
                   />
                   <ListItem
                     itemname="Clothes"
-                    className="border border-solid border-[#2D2D2D] px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
+                    className="border-b border-solid border-[#2D2D2D] px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
                   />
                   <ListItem
                     itemname="Bags"
-                    className="border border-solid border-[#2D2D2D] px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
+                    className="border-b border-solid border-[#2D2D2D] px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
                   />
                   <ListItem
                     itemname="Home appliances"
-                    className="border border-solid border-[#2D2D2D] px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
+                    className="px-5 py-4 duration-100 ease-in hover:px-6 hover:font-bold hover:text-white"
                   />
                 </List>
               )}
@@ -69,7 +78,27 @@ const Header = () => {
             />
             <FaSearch className="absolute right-5 top-5" />
           </div>
-          <div>1</div>
+          <div className="flex gap-x-10">
+          <Dropdown className="relative" dropref={userRef}>
+          <div className="flex">
+              <FaUser />
+              <VscTriangleDown /> 
+             </div>
+             {userDropDownShow && (
+                <List className="absolute top-8 right-0 w-[200px] bg-white font-dm text-sm font-normal text-primary text-center border border-solid border-[#F0F0F0]">
+                  <ListItem
+                    itemname="My Account"
+                    className="border-b border-solid border-#F0F0F0] px-5 py-4 duration-100 ease-in hover:font-bold hover:text-white hover:bg-primary"
+                  />
+                  <ListItem
+                    itemname="Log Out"
+                    className="border-b border-solid border-[#F0F0F0] px-5 py-4 duration-100 ease-in hover:font-bold hover:text-white hover:bg-primary"
+                  />
+                </List>
+              )}
+          </Dropdown>
+              <div><FaShoppingCart/></div>
+          </div>
         </Flex>
       </Container>
     </div>
