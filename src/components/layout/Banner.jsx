@@ -18,7 +18,7 @@ const Banner = () => {
         slidesToScroll: 1,
         autoplay: true,
         infinite: true,
-        appendDots: dots => (
+        appendDots: (dots) => (
             <div
               style={{
                 position: 'absolute',
@@ -46,7 +46,44 @@ const Banner = () => {
             >
               0{i + 1}
             </div>
-          )
+          ),
+          responsive: [
+            {
+              breakpoint: 576,
+              settings: {
+                dots: true,
+                appendDots: (dots) => (
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: "50%",
+                        left: "2%",
+                        transform: "translateY(-50%)"
+                      }}
+                    >
+                      <ul style={{ margin: "0px" }}> {dots} </ul>
+                    </div>
+                  ),
+                  customPaging: (i) => (
+                    <div
+                    style={i === dotActive ? {
+                        width: "30px",
+                        color: "#262626",
+                        borderRight: "3px #262626 solid",
+                        fontSize: "12px"
+                    }: {
+                        width: "30px",
+                        color: "transparent",
+                        borderRight: "3px white solid",
+                        fontSize: "12px"
+                    }}
+                    >
+                      0{i + 1}
+                    </div>
+                  ),
+              }
+            }
+          ]
       };
   return (
     <>
