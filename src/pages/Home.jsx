@@ -6,6 +6,7 @@ import Newarrival from '../components/layout/Newarrival'
 import Bestseller from '../components/layout/Bestseller'
 import MiddleAdvertisment from '../components/layout/MiddleAdvertisment'
 import Offers from '../components/layout/Offers'
+import Footer from '../components/layout/Footer'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Bestseller/>
       <MiddleAdvertisment/>
       <Offers/>
+      <Footer/>
     </>
   )
 }
