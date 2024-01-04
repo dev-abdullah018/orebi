@@ -135,9 +135,9 @@ const Header = () => {
                     </div>
                     <div className="bg-white  p-5">
                       <h4 className="font-dm text-base font-normal text-[#767676]">
-                        Subtotal :{" "}
-                        <span className="font-bold text-primary">$44.00</span>
+                        Subtotal: <span className="font-bold text-primary">$44.00</span>
                       </h4>
+                      <div className="flex gap-x-[18px]">
                       <Link
                         to="#"
                         className="mt-3 inline-block border border-solid border-primary px-10 py-4 font-dm text-sm font-bold"
@@ -146,10 +146,11 @@ const Header = () => {
                       </Link>
                       <Link
                         to="#"
-                        className="ml-5 mt-3 inline-block border border-solid border-primary bg-primary px-10 py-4 font-dm text-sm font-bold text-white"
+                        className="mt-3 inline-block border border-solid border-primary bg-primary px-10 py-4 font-dm text-sm font-bold text-white"
                       >
                         Checkout
                       </Link>
+                      </div>
                     </div>
                   </div>
                 )}
