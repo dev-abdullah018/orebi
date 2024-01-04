@@ -51,7 +51,7 @@ const Header = () => {
               dropref={categoryRef}
               titleicon={<HiBars3BottomLeft />}
               titletext="Shop by Category"
-              className="relative"
+              className="relative z-50"
             >
               {categoryShow && (
                 <List className="absolute top-8 w-[263px] bg-primary font-dm text-sm font-normal text-[#767676]">
@@ -91,7 +91,7 @@ const Header = () => {
             <FaSearch className="absolute right-5 top-5" />
           </div>
           <div className="flex gap-x-10">
-            <Dropdown className="relative" dropref={userRef}>
+            <Dropdown className="relative z-50" dropref={userRef}>
               <div className="flex">
                 <FaUser />
                 <VscTriangleDown />
@@ -111,7 +111,7 @@ const Header = () => {
             </Dropdown>
 
             <div>
-              <Dropdown className="relative" dropref={cartRef}>
+              <Dropdown className="relative z-50" dropref={cartRef}>
                 <FaShoppingCart className="text-xl" />
                 {cartDropDownShow && (
                   <div className="absolute right-0 top-8 w-[360px] border border-solid border-[#F0F0F0]">
