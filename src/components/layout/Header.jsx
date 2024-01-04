@@ -1,10 +1,10 @@
+import React, { useEffect, useRef, useState } from "react";
 import Container from "./Container";
 import Dropdown from "./Dropdown";
 import Flex from "./Flex";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import List from "./List";
 import ListItem from "./ListItem";
-import { useEffect, useRef, useState } from "react";
 import Search from "./Search";
 import { FaSearch, FaUser, FaShoppingCart } from "react-icons/fa";
 import { VscTriangleDown } from "react-icons/vsc";

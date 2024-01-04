@@ -1,10 +1,10 @@
+import React, { useEffect, useState } from 'react';
 import logo from '../../assets/logo.png'
 import Image from './Image';
 import Flex from './Flex';
 import List from './List';
 import ListItem from './ListItem';
 import { FaBars } from "react-icons/fa6";
-import { useEffect, useState } from 'react';
 import Container from './Container';
 
 const Navbar = () => {
