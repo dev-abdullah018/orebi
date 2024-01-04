@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 const Banner = () => {
-    let [dotActive, setDotActive] = useState("")
+    let [dotActive, setDotActive] = useState(0)
     const settings = {
         dots: true,
         beforeChange: (prev,next)=>{
@@ -30,7 +30,7 @@ const Banner = () => {
               <ul style={{ margin: "0px" }}> {dots} </ul>
             </div>
           ),
-          customPaging: i => (
+          customPaging: (i) => (
             <div
             style={i === dotActive ? {
                 width: "30px",
