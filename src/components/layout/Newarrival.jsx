@@ -42,7 +42,6 @@ const Newarrival = () => {
               <Product src={P1} badge={true} />
             </div>
           </Slider>
-
           {/* </Flex> */}
         </Container>
       </div>
