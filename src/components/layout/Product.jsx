@@ -9,7 +9,7 @@ const Product = ({ src, badge }) => {
   return (
     <div>
       <div className="group relative overflow-y-hidden">
-        <Image src={src} />
+        <Image className="w-full" src={src} />
         {badge && <Badge title="New" />}
         <div className="absolute bottom-[-44%] lg:max-xl:bottom-[-75%] left-0 h-[156px] w-full bg-white px-7 py-6 duration-300 ease-in group-hover:bottom-0">
           <Flex className="flex items-center justify-end gap-x-1 sm:gap-x-4">
