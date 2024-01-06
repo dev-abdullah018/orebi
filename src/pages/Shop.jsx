@@ -13,7 +13,7 @@ const Shop = () => {
         <Flex className="flex gap-x-10">
           <div className="w-[25%] bg-red-600">adad</div>
           <div className="relative w-[75%]">
-            <div className="flex gap-x-12">
+            <div className="flex gap-x-12 mb-3.5">
             <div className="md:flex items-center gap-x-3.5">
             <span className="inline-block font-dm font-normal text-base text-[#767676]">Sort by:</span>
             <select
@@ -30,7 +30,7 @@ const Shop = () => {
             <div className="md:flex items-center gap-x-3.5">
             <span className="inline-block font-dm font-normal text-base text-[#767676]">Show:</span>
             <select
-              onChange={(e)=> setShowNumber(e.target.value)}
+              onChange={(e)=> setShowNumber(+e.target.value)}
               id="countries"
               class="block md:w-[139px] w-full rounded-lg border border-[#f0f0f0] p-2.5 font-dm text-base font-normal text-[#767676] focus:border-black focus:ring-black"
             >
