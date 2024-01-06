@@ -3,6 +3,7 @@ import Container from "../components/layout/Container";
 import Breadcrumb from "../components/layout/Breadcrumb";
 import Flex from "../components/layout/Flex";
 import Pagination from "../components/layout/Pagination";
+import LeftSideBar from "../components/layout/LeftSideBar";
 
 const Shop = () => {
   let [showNumber,setShowNumber] = useState(12);
@@ -11,7 +12,9 @@ const Shop = () => {
       <Container>
         <Breadcrumb />
         <Flex className="flex gap-x-10">
-          <div className="w-[25%] bg-red-600">adad</div>
+          <div className="w-[25%] bg-red-600">
+          <LeftSideBar/>
+          </div>
           <div className="relative w-[75%]">
             <div className="flex gap-x-12 mb-3.5">
             <div className="md:flex items-center gap-x-3.5">
