@@ -4,7 +4,7 @@ import LeftSidebarItem from "./LeftSidebarItem";
 
 const SidebarContent = ({dropDown}) => {
   let [drop, setDrop] = useState(dropDown);
-  let [show, setShow] = useState(false);
+  let [show, setShow] = useState(dropDown);
   return (
     <div>
       {drop ? (
@@ -21,13 +21,84 @@ const SidebarContent = ({dropDown}) => {
 
       {show && (
         <div>
-          <LeftSidebarItem subdropdown={true}/>
-          <LeftSidebarItem subdropdown={false}/>
-          <LeftSidebarItem subdropdown={true}/>
-          <LeftSidebarItem subdropdown={false}/>
-          <LeftSidebarItem subdropdown={true}/>
+          <LeftSidebarItem subDropDown={true} title="Category 1">
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+          </LeftSidebarItem>
+          <LeftSidebarItem subDropDown={false} title="Category 1">
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+          </LeftSidebarItem>
+          <LeftSidebarItem subDropDown={true} title="Category 1">
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+          </LeftSidebarItem>
+          <LeftSidebarItem subDropDown={false} title="Category 1">
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+          </LeftSidebarItem>
+          <LeftSidebarItem subDropDown={true} title="Category 1">
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+          </LeftSidebarItem>
         </div>
       )}
+      {
+        !drop && (
+          <div>
+          <LeftSidebarItem subDropDown={true} title="Category 1">
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+          </LeftSidebarItem>
+          <LeftSidebarItem subDropDown={false} title="Category 1">
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+          </LeftSidebarItem>
+          <LeftSidebarItem subDropDown={true} title="Category 1">
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+          </LeftSidebarItem>
+          <LeftSidebarItem subDropDown={false} title="Category 1">
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+          </LeftSidebarItem>
+          <LeftSidebarItem subDropDown={true} title="Category 1">
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+           <p>ljlg</p>
+          </LeftSidebarItem>
+        </div>
+        )
+      }
     </div>
   );
 };
