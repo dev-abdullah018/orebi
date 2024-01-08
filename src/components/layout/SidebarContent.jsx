@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { VscTriangleDown } from "react-icons/vsc";
 import LeftSidebarItem from "./LeftSidebarItem";
 
-const SidebarContent = ({ dropDown, droptitle }) => {
+const SidebarContent = ({ dropDown, droptitle, data }) => {
   let [drop, setDrop] = useState(dropDown);
   let [show, setShow] = useState(dropDown);
   return (
@@ -25,60 +25,71 @@ const SidebarContent = ({ dropDown, droptitle }) => {
 
       {show && (
         <div>
-          <LeftSidebarItem subDropDown={false} title="Category 1" color="black">
-            <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
-              abdulla
-            </h1>
-          </LeftSidebarItem>
-          <LeftSidebarItem subDropDown={true} title="Category 2" color="">
-            <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
-              abdulla
-            </h1>
-          </LeftSidebarItem>
-          <LeftSidebarItem subDropDown={true} title="Category 3" color="yellow">
-            <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
-              abdulla
-            </h1>
-          </LeftSidebarItem>
-          <LeftSidebarItem subDropDown={true} title="Category 4" color="blue">
-            <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
-              abdulla
-            </h1>
-          </LeftSidebarItem>
-          <LeftSidebarItem subDropDown={true} title="Category 5" color="green">
-            <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
-              abdulla
-            </h1>
-          </LeftSidebarItem>
+          {data.map((item,index) => 
+             item.subCategory ? (
+              <LeftSidebarItem
+              subDropDown={item.subCategory ? true : false}
+              title={item.name}
+              color={item.code}
+            >
+              {item.subCategory &&
+                item.subCategory.map((subitem) => (
+                  <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
+                    {subitem.name}
+                  </h1>
+                ))}
+            </LeftSidebarItem>
+             ) : (
+              <LeftSidebarItem
+              subDropDown={item.subCategory ? true : false}
+              title={item.name}
+              color={item.code}
+            >
+              {item.subCategory &&
+                item.subCategory.map((subitem) => (
+                  <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
+                    {subitem.name}
+                  </h1>
+                ))}
+            </LeftSidebarItem>
+             )
+           
+          )}
         </div>
       )}
+
       {!drop && (
         <div>
-          <LeftSidebarItem subDropDown={true} title="Category 1" color="black">
-            <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
-              abdulla
-            </h1>
-          </LeftSidebarItem>
-          <LeftSidebarItem subDropDown={true} title="Category 2" color="red">
-            <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
-              abdulla
-            </h1>
-          </LeftSidebarItem>
-          <LeftSidebarItem subDropDown={true} title="Category 3" color="yellow">
-            <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
-              abdulla
-            </h1>
-          </LeftSidebarItem>
-          <LeftSidebarItem subDropDown={true} title="Category 4" color="blue">
-            <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
-              abdulla
-            </h1>
-          </LeftSidebarItem>
-          <LeftSidebarItem subDropDown={true} title="Category 5" color="green">
-            <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
-              abdulla
-            </h1>
-          </LeftSidebarItem>
+          {data.map((item,index) => 
+             item.subCategory ? (
+              <LeftSidebarItem
+              subDropDown={item.subCategory ? true : false}
+              title={item.name}
+              color={item.code}
+            >
+              {item.subCategory &&
+                item.subCategory.map((subitem) => (
+                  <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
+                    {subitem.name}
+                  </h1>
+                ))}
+            </LeftSidebarItem>
+             ) : (
+              <LeftSidebarItem
+              subDropDown={item.subCategory ? true : false}
+              title={item.name}
+              color={item.code}
+            >
+              {item.subCategory &&
+                item.subCategory.map((subitem) => (
+                  <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
+                    {subitem.name}
+                  </h1>
+                ))}
+            </LeftSidebarItem>
+             )
+           
+          )}
         </div>
       )}
     </div>
@@ -86,3 +97,20 @@ const SidebarContent = ({ dropDown, droptitle }) => {
 };
 
 export default SidebarContent;
+
+
+{/* <div>
+          {data.map((item) => (
+            <LeftSidebarItem
+              subDropDown={item.subCategory ? true : false}
+              title={item.name}
+            >
+              {item.subCategory &&
+                item.subCategory.map((subitem) => (
+                  <h1 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
+                    {subitem.name}
+                  </h1>
+                ))}
+            </LeftSidebarItem>
+          ))}
+        </div> */}

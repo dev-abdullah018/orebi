@@ -14,7 +14,7 @@ const LeftSidebarItem = (props) => {
           <h3 className="cursor-pointer py-5 font-dm text-base font-normal text-[#767676]">
             {props.color && (
               <span
-                className="inline-block h-[11px] w-[11px] rounded-full mr-2"
+                className="mr-2 inline-block h-[11px] w-[11px] rounded-full"
                 style={{ background: props.color }}
               ></span>
             )}
@@ -24,6 +24,12 @@ const LeftSidebarItem = (props) => {
         </div>
       ) : (
         <h3 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
+          {props.color && (
+            <span
+              className="mr-2 inline-block h-[11px] w-[11px] rounded-full"
+              style={{ background: props.color }}
+            ></span>
+          )}
           {props.title}
         </h3>
       )}
