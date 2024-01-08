@@ -13,7 +13,7 @@ const Shop = () => {
 
   useEffect(()=>{
     function scrollWidth(){
-      if(window.innerWidth < 1024){
+      if(window.innerWidth < 575){
         setShow(false)
       }else{
         setShow(true)
@@ -30,7 +30,7 @@ const Shop = () => {
         {
           show && (
             <div className="absolute left-0 top-0 z-50 w-full bg-white p-5 sm:bg-transparent sm:static sm:w-[25%]">
-            <IoIosCloseCircle onClick={()=> setShow(!show)}/>
+            <IoIosCloseCircle className="block sm:hidden" onClick={()=> setShow(!show)}/>
             <LeftSideBar />
           </div>
           )
@@ -38,7 +38,7 @@ const Shop = () => {
           <div className="relative w-full md:w-[75%]">
             <div className="mb-3.5 flex gap-x-12">
               <div className="mb-4 flex items-end">
-                <IoFilterCircle onClick={()=> setShow(!show)} className="inline-block text-2xl text-[#767676] md:hidden" />
+                <IoFilterCircle onClick={()=> setShow(!show)} className="inline-block text-2xl text-[#767676] sm:hidden " />
               </div>
               <div className="items-center gap-x-3.5 md:flex">
                 <span className="inline-block font-dm text-base font-normal text-[#767676]">
