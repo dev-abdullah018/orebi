@@ -1,30 +1,36 @@
 import React, { useState } from "react";
-import { VscTriangleDown } from "react-icons/vsc";
+import { FaPlus } from "react-icons/fa";
 
-const LeftSidebarItem = ({subDropDown,title,children}) => {
-    let [drop, setDrop] = useState(subDropDown);
-    let [show, setShow] = useState(false);
+const LeftSidebarItem = (props) => {
+  let [drop, setDrop] = useState(props.subDropDown);
+  let [show, setShow] = useState(false);
   return (
     <div>
-    {drop ? (
-      <div
-        onClick={() => setShow(!show)}
-        className="flex items-center justify-between cursor-pointer"
-      >
-        <h3>{title}</h3>
-        <VscTriangleDown />
-      </div>
-    ) : (
-      <h3 className="cursor-pointer">{title}</h3>
-    )}
+      {drop ? (
+        <div
+          onClick={() => setShow(!show)}
+          className="flex items-center justify-between border-b border-solid border-[#767676]"
+        >
+          <h3 className="cursor-pointer py-5 font-dm text-base font-normal text-[#767676]">
+            {props.color && (
+              <span
+                className="inline-block h-[11px] w-[11px] rounded-full mr-2"
+                style={{ background: props.color }}
+              ></span>
+            )}
+            {props.title}
+          </h3>
+          <FaPlus className="text-[#767676]" />
+        </div>
+      ) : (
+        <h3 className="cursor-pointer border-b border-solid border-[#767676] py-5 font-dm text-base font-normal text-[#767676]">
+          {props.title}
+        </h3>
+      )}
 
-    {show && (
-      <div>
-       {children}
-      </div>
-    )}
-  </div>
-  )
-}
+      {show && <div>{props.children}</div>}
+    </div>
+  );
+};
 
 export default LeftSidebarItem;

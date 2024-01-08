@@ -12,7 +12,7 @@ const Shop = () => {
       <Container>
         <Breadcrumb />
         <Flex className="flex gap-x-10">
-          <div className="w-[25%] bg-red-600">
+          <div className="w-[25%]">
           <LeftSideBar/>
           </div>
           <div className="relative w-[75%]">
