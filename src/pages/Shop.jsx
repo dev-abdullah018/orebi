@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../components/layout/Container";
 import Breadcrumb from "../components/layout/Breadcrumb";
 import Flex from "../components/layout/Flex";
@@ -9,19 +9,36 @@ import { IoIosCloseCircle } from "react-icons/io";
 
 const Shop = () => {
   let [showNumber, setShowNumber] = useState(12);
+  let [show,setShow] = useState(true);
+
+  useEffect(()=>{
+    function scrollWidth(){
+      if(window.innerWidth < 1024){
+        setShow(false)
+      }else{
+        setShow(true)
+      }
+    }
+    scrollWidth()
+    window.addEventListener("resize", scrollWidth)
+  },[])
   return (
     <>
       <Container>
         <Breadcrumb />
         <Flex className="relative flex gap-x-10">
-          <div className="absolute left-0 top-0 z-50 w-full bg-white p-5 sm:bg-transparent sm:static sm:w-[25%]">
-            <IoIosCloseCircle/>
+        {
+          show && (
+            <div className="absolute left-0 top-0 z-50 w-full bg-white p-5 sm:bg-transparent sm:static sm:w-[25%]">
+            <IoIosCloseCircle onClick={()=> setShow(!show)}/>
             <LeftSideBar />
           </div>
+          )
+        }
           <div className="relative w-full md:w-[75%]">
             <div className="mb-3.5 flex gap-x-12">
               <div className="mb-4 flex items-end">
-                <IoFilterCircle className="inline-block text-2xl text-[#767676] md:hidden" />
+                <IoFilterCircle onClick={()=> setShow(!show)} className="inline-block text-2xl text-[#767676] md:hidden" />
               </div>
               <div className="items-center gap-x-3.5 md:flex">
                 <span className="inline-block font-dm text-base font-normal text-[#767676]">
