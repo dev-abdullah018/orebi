@@ -90,17 +90,17 @@ const Banner = () => {
       <Slider {...settings}>
         <Link to="#">
           <div>
-            <Image src={banner}/>
+            <Image className="object-cover w-full" src={banner}/>
           </div>
         </Link> 
         <Link to="#">
           <div>
-            <Image src={banner}/>
+            <Image className="object-cover w-full" src={banner}/>
           </div>
         </Link>
         <Link to="#">
           <div>
-            <Image src={banner}/>
+            <Image className="object-cover w-full" src={banner}/>
           </div>
         </Link>
       </Slider>
