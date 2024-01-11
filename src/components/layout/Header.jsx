@@ -43,7 +43,7 @@ const Header = () => {
     });
   }, []);
   return (
-    <div className="bg-[#F5F5F3] py-6">
+    <div className="bg-[#F5F5F3] py-6 z-0">
       <Container>
         <Flex className="flex items-center justify-between">
           <div>
