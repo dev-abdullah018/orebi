@@ -5,7 +5,6 @@ import { IoEye,IoEyeOff } from "react-icons/io5";
 import Button from "./Button";
 
 const SignUpFrom = () => {
-  // Placeholder data for divisions and districts
   const divisions = [
     "Dhaka",
     "Chittagong",
@@ -52,11 +51,11 @@ const SignUpFrom = () => {
     setShowPassword2((prevShowPassword) => !prevShowPassword);
   };
 
-  const handleCheckboxChange = () => {
+  const handleCheckbox = () => {
     setIsChecked(!isChecked);
   };
 
-  const handleSubscribeChange = () => {
+  const handleSubscribe = () => {
     setSubscribe(!subscribe);
   };
 
@@ -227,7 +226,7 @@ const SignUpFrom = () => {
         type="checkbox"
         className="border-[#767676] rounded focus:ring-blue-500 h-4 w-4 text-blue-600 focus:outline-none"
         checked={isChecked}
-        onChange={handleCheckboxChange}
+        onChange={handleCheckbox}
       />
       <label className="text-[#767676]">
         I have read and agree to the Privacy Policy
@@ -241,7 +240,7 @@ const SignUpFrom = () => {
           name="subscribe"
           className="mr-4 border-gray-300 rounded focus:ring-blue-500 h-4 w-4 text-blue-600 focus:outline-none"
           checked={subscribe}
-          onChange={handleSubscribeChange}
+          onChange={handleSubscribe}
         />
         <label className="font-dm font-normal text-sm text-[#767676]">
           Yes
