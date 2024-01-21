@@ -13,6 +13,8 @@ import NotFoundPage from "./pages/NotFoundPage";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import MyAccount from "./pages/MyAccount";
 
 let router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +27,8 @@ let router = createBrowserRouter(
      <Route path="/signup" element={<SignUp/>}></Route>
      <Route path="/login" element={<Login/>}></Route>
      <Route path="/cart" element={<Cart/>}></Route>
+     <Route path="/checkout" element={<Checkout/>}></Route>
+     <Route path="/account" element={<MyAccount/>}></Route>
     </Route>
      <Route path="*" element={<NotFoundPage />} />
    </>

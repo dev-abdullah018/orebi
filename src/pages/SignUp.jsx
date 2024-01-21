@@ -5,7 +5,7 @@ import SignUpFrom from "../components/layout/SignUpFrom";
 
 const SignUp = () => {
   return ( 
-    <div className="my-32">
+    <div>
         <Container>
           <div className="border-b border-[#F0F0F0] pb-16">
             <Breadcrumb title="sign up" />

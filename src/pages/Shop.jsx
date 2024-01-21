@@ -29,7 +29,7 @@ const Shop = () => {
         <Flex className="relative flex gap-x-10">
         {
           show && (
-            <div className="absolute left-0 top-0 z-50 w-full bg-white p-5 sm:bg-transparent sm:static sm:w-[25%]">
+            <div className="absolute left-0 top-0 z-50 w-full bg-white p-5 pl-0 sm:bg-transparent sm:static sm:w-[25%]">
             <IoIosCloseCircle className="block sm:hidden" onClick={()=> setShow(!show)}/>
             <LeftSideBar />
           </div>

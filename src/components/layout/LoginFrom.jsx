@@ -6,19 +6,10 @@ import Button from "./Button";
 
 const LoginFrom = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
-  const [subscribe, setSubscribe] = useState(false);
+ 
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
-  };
-
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
-
-  const handleSubscribeChange = () => {
-    setSubscribe(!subscribe);
   };
 
   return (
@@ -60,7 +51,7 @@ const LoginFrom = () => {
     <Heading title="New Customer" />
      <p className="w-[644px] font-dm font-normal text-base text-[#767676] leading-[30px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
     </div>
-     <Button title="Log in"></Button>
+     <Button title="Login"></Button>
     </div>
   );
 };

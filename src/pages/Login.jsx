@@ -5,7 +5,6 @@ import LoginFrom from "../components/layout/LoginFrom";
 
 const Login = () => {
   return ( 
-    <div className="my-32">
         <Container>
           <div className="border-b border-[#F0F0F0] pb-16">
             <Breadcrumb title="login" />
@@ -17,7 +16,6 @@ const Login = () => {
           </div>
           <LoginFrom/>
         </Container>
-    </div>
   );
 };
 
