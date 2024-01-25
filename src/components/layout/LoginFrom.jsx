@@ -16,8 +16,8 @@ const LoginFrom = () => {
     <div>
       <div className="pt-14 pb-16  border-b border-solid border-[#F0F0F0]">
       <Heading title="Returning Customer" />
-      <div className="mt-10 grid grid-cols-2 gap-12">
-          <div>
+      <div className="mt-10 sm:grid sm:grid-cols-2 sm:gap-12">
+          <div className="mb-12 sm:mb-0">
               <InputBox
                 as="input"
                 type="email"

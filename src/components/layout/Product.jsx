@@ -5,9 +5,9 @@ import Flex from "./Flex";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import { TfiReload } from "react-icons/tfi";
 
-const Product = ({ src, badge }) => {
+const Product = ({ src, badge}) => {
   return (
-    <div>
+    <div className="px-5">
       <div className="group relative overflow-y-hidden">
         <Image className="w-full" src={src} />
         {badge && <Badge title="New" />}

@@ -10,7 +10,7 @@ const CheckOutFrom = () => {
   return (
     <div className="pb-10">
       <Heading title="Billing Details" />
-      <div className="mt-10 w-1/2">
+      <div className="mt-10 md:w-1/2">
         <div>
           <div className="mb-12">
             <InputBox
@@ -100,14 +100,14 @@ const CheckOutFrom = () => {
             type="text"
             title="Other Notes (optional)"
             placeholder="Notes about your order, e.g. special notes for delivery."
-            className=" pb-20"
+            className="pb-12 md:pb-20"
           />
         </div>
         <div className="mb-10 mt-[129px]">
           <Heading title="Your Order" />
           <Table headings={headings} rows={rows} />
         </div>
-        <Button title="Proceed to Bank" />
+        <Button title="Proceed to Bank"  className="sm:!px-10"/>
       </div>
     </div>
   );

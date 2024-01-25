@@ -2,7 +2,7 @@ import React from 'react';
 
 const Table = ({ headings, rows }) => {
   return (
-    <table className="w-[644px] grid grid-flow-col border border-solid border-[#f0f0f0]">
+    <table className="sm:w-[644px] grid grid-flow-col border border-solid border-[#f0f0f0]">
       <thead>
         <tr className="font-dm font-bold text-base text-primary grid grid-flow-row ">
           {headings.map((heading, index) => (

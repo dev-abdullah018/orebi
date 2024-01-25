@@ -8,7 +8,7 @@ const Checkout = () => {
     <Container>
           <div className="pb-[119px]">
             <Breadcrumb title="checkout" />
-            <p className="text-[#6D6D60] font-normal w-[600px]">Have a coupon? Click here to enter your code</p>
+            <p className="text-[#6D6D60] font-normal sm:w-[600px]">Have a coupon? Click here to enter your code</p>
           </div>
           <CheckOutFrom/>
     </Container>

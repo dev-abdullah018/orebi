@@ -10,13 +10,13 @@ const About = () => {
   return (
     <Container>
        <Breadcrumb />
-       <Flex className="flex gap-x-10">
-           <div className='w-2/4'>
+       <Flex className="sm:flex sm:gap-x-10">
+           <div className='sm:w-2/4'>
             <Link to="#">
             <Image src={aboutimg} className="w-full"/>
             </Link>
            </div>
-           <div className='w-2/4'>
+           <div className='sm:w-2/4 mt-10 sm:mt-0'>
            <Link to="#">
             <Image src={aboutimg} className="w-full"/>
            </Link>

@@ -1,30 +1,53 @@
 import React from "react";
 import Container from "./Container";
 import Heading from "./Heading";
-import Flex from "./Flex";
 import Product from "./Product";
-import P1 from "../../assets/p1.png";
+import Slider from "react-slick";
+import newArrival from "../../data/productData";
 
 const Offers = () => {
+  const settings = {
+    dots: false,
+    autoplay: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <>
       <div className="mt-5 md:mt-32">
         <Container>
-          <Heading title="Special Offers" />
-          <Flex className="sm:flex sm:max-lg:flex-wrap sm:max-md:justify-between md:gap-x-10">
-            <div className="sm:max-w-[300px] md:max-lg:max-w-[345px] lg:max-w-[370px]">
-              <Product src={P1} badge={true} />
-            </div>
-            <div className="sm:max-w-[300px] md:max-lg:max-w-[345px] lg:max-w-[370px]">
-              <Product src={P1} badge={false} />
-            </div>
-            <div className="sm:max-w-[300px] md:max-lg:max-w-[345px] lg:max-w-[370px]">
-              <Product src={P1} badge={true} />
-            </div>
-            <div className="sm:max-w-[300px] md:max-lg:max-w-[345px] lg:max-w-[370px]">
-              <Product src={P1} badge={true} />
-            </div>
-          </Flex>
+        <Heading title="Special Offers" />
+          <Slider {...settings}>
+            {newArrival.map((item, index) => (
+              <Product key={index} src={item.image} badge={true} />
+            ))}
+          </Slider>
         </Container>
       </div>
     </>

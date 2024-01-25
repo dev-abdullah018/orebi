@@ -63,8 +63,8 @@ const SignUpFrom = () => {
     <div>
       <div className="pt-14 pb-16 border-b border-solid border-[#F0F0F0]">
         <Heading title="Your Personal Details" />
-        <div className="mt-10 grid grid-cols-2 gap-12">
-          <div>
+        <div className="mt-10">
+            <div className="sm:grid sm:grid-cols-2 sm:gap-12">
             <div className="mb-12">
               <InputBox
                 as="input"
@@ -73,23 +73,22 @@ const SignUpFrom = () => {
                 placeholder="First Name"
               />
             </div>
-            <div>
-              <InputBox
-                as="input"
-                type="email"
-                title="Email Address"
-                placeholder="Email Address"
-              />
-            </div>
-          </div>
-
-          <div>
             <div className="mb-12">
               <InputBox
                 as="input"
                 type="text"
                 title="Last Name"
                 placeholder="Last Name"
+              />
+            </div>
+            </div>
+            <div className="sm:grid sm:grid-cols-2 sm:gap-12">
+            <div>
+              <InputBox
+                as="input"
+                type="email"
+                title="Email Address"
+                placeholder="Email Address"
               />
             </div>
             <div>
@@ -100,14 +99,15 @@ const SignUpFrom = () => {
                 placeholder="Telephone Number"
               />
             </div>
-          </div>
+            </div>
         </div>
       </div>
+
       <div className="pt-14 pb-16 border-b border-solid border-[#F0F0F0]">
         <Heading title="New Customer" />
-        <div className="mt-10 grid grid-cols-2 gap-12">
-          <div>
-            <div className="mb-12">
+        <div className="mt-10">
+           <div className="sm:grid sm:grid-cols-2 sm:gap-12">
+           <div className="mb-12">
               <InputBox
                 as="input"
                 type="text"
@@ -119,11 +119,31 @@ const SignUpFrom = () => {
               <InputBox
                 as="input"
                 type="text"
+                title="Address2"
+                placeholder="---"
+              />
+            </div>
+           </div>
+           <div className="sm:grid sm:grid-cols-2 sm:gap-12">
+           <div className="mb-12">
+              <InputBox
+                as="input"
+                type="text"
                 title="City"
                 placeholder="City"
               />
             </div>
-            <div>
+            <div className="mb-12">
+              <InputBox
+                as="input"
+                type="text"
+                title="Post Code"
+                placeholder="Post Code"
+              />
+            </div>
+           </div>
+           <div className="sm:grid sm:grid-cols-2 sm:gap-12">
+           <div className="mb-12 sm:mb-0">
               <InputBox
                 as="select"
                 title="Division"
@@ -137,24 +157,6 @@ const SignUpFrom = () => {
                   </option>
                 ))}
               </InputBox>
-            </div>
-          </div>
-          <div>
-            <div className="mb-12">
-              <InputBox
-                as="input"
-                type="text"
-                title="Address2"
-                placeholder="---"
-              />
-            </div>
-            <div className="mb-12">
-              <InputBox
-                as="input"
-                type="text"
-                title="Post Code"
-                placeholder="Post Code"
-              />
             </div>
             <div>
               <InputBox
@@ -172,13 +174,14 @@ const SignUpFrom = () => {
                   ))}
               </InputBox>
             </div>
-          </div>
+           </div>
         </div>
       </div>
+
       <div className="pt-14 pb-16  border-b border-solid border-[#F0F0F0]">
       <Heading title="Your Password" />
-      <div className="mt-10 grid grid-cols-2 gap-12">
-        <div className="relative">
+      <div className="mt-10 sm:grid sm:grid-cols-2 sm:gap-12">
+        <div className="relative mb-12 sm:mb-0">
           <InputBox
             as="input"
             type={showPassword1 ? "text" : "password"}

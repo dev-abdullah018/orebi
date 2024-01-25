@@ -9,7 +9,7 @@ const SignUp = () => {
         <Container>
           <div className="border-b border-[#F0F0F0] pb-16">
             <Breadcrumb title="sign up" />
-            <p className="text-[#6D6D60] font-normal w-[600px]">
+            <p className="text-[#6D6D60] font-normal sm:w-[600px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry&apos;s standard dummy text
               ever since the.
