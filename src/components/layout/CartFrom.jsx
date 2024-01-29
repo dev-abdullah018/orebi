@@ -35,7 +35,7 @@ const CartFrom = () => {
   return (
     <div>
       <div className="border border-solid border-[#f0f0f0]">
-        <div className="grid w-full grid-cols-4 bg-[#f3f3f3] px-5 py-8">
+        <div className="md:grid w-full md:grid-cols-4 bg-[#f3f3f3] px-2 md:px-5 py-5 md:py-8 flex justify-between items-center">
           <div>
             <h4 className="font-dm text-base font-bold text-primary">
               Product
@@ -53,70 +53,69 @@ const CartFrom = () => {
             <h4 className="font-dm text-base font-bold text-primary">Total</h4>
           </div>
         </div>
-        <div className="grid w-full  grid-cols-4 border-t border-solid border-[#f0f0f0] bg-[#fff] px-5">
-          <div className="flex items-center gap-10">
-            <RxCross2 />
-            <div className="flex items-center gap-5">
-              <Image src={cartimg} />
-              <h4 className="font-dm text-base font-bold text-primary">
+        <div className="md:grid w-full md:grid-cols-4 border-t border-solid border-[#f0f0f0] bg-[#fff] md:px-5 px-2 flex justify-between items-center">
+          <div className="flex items-center xl:gap-10 gap-2 py-5 md:py-0">
+            <RxCross2 className="text-[12px] md:text-sm xl:text-lg" />
+            <div className="flex items-center gap-2 w-16 lg:w-20 xl:w-full flex-col md:flex-row">
+              <Image src={cartimg}/>
+              <h4 className="font-dm text-sm md:text-base font-bold text-primary">
                 Product name
               </h4>
             </div>
-          </div>
+          </div> 
           <div>
-            <h4 className="py-[68px] font-dm text-base font-bold text-primary">
+            <h4 className="md:py-[68px] font-dm text-sm md:text-base font-bold text-primary">
               $44.00
             </h4>
           </div>
-          <div className="py-[62px]">
-            <div className="flex w-[139px] items-center border border-solid border-[#F0F0F0] px-5 py-1">
+          <div className="md:py-[62px]">
+            <div className="flex w-[70px] md:w-[139px] items-center border border-solid border-[#F0F0F0] md:px-5 px-2 py-1">
               <span onClick={decrementQuantity}>
-                <FaMinus className="text-[#767676]" />
+                <FaMinus className="text-[#767676] text-[12px] md:text-base" />
               </span>
               <input
                 ref={inputRef}
                 type="text"
                 value="1"
-                className="w-16 text-center text-[#767676] outline-none"
+                className="w-7 md:w-16 text-center text-[#767676] outline-none text-sm md:text-base"
               />
               <span onClick={incrementQuantity}>
-                <FaPlus className="text-[#767676]" />
+                <FaPlus className="text-[#767676] text-[12px] md:text-base" />
               </span>
             </div>
           </div>
           <div>
-            <h4 className="py-[68px] font-dm text-base font-bold text-primary">
+            <h4 className="md:py-[68px] font-dm text-sm md:text-base font-bold text-primary">
             $44.00
             </h4>
           </div>
         </div>
-        <div className="flex w-full items-center justify-between  border-t border-solid border-[#f0f0f0] bg-[#fff] px-5">
-          <div className="flex items-center gap-6">
+        <div className="flex w-full items-center justify-between  border-t border-solid border-[#f0f0f0] bg-[#fff] px-2 md:px-5 py-5">
+          <div className="flex items-center gap-2 md:gap-6">
             <select
               type="select"
               value={selectedSize}
               onChange={handleSize}
-              className="w-[255px] border border-solid border-[#767676] px-5 py-3"
+              className="md:w-[255px] border border-solid border-[#767676] px-2 md:px-5 py-1 md:py-3 font-dm text-sm md:text-base font-normal uppercase text-[#767676]"
             >
-              <option className="font-dm text-base font-normal uppercase text-[#767676]">
-                SIZE
-              </option>
+              <option value="" disabled selected hidden>
+                   size
+               </option>
               {sizes.map((size) => (
                 <option
                   key={size}
                   value={size}
-                  className="font-dm text-base font-normal text-[#767676] "
                 >
                   {size}
                 </option>
               ))}
             </select>
-            <h4 className="font-dm text-sm font-bold text-primary">
+            <h4 className="font-dm text-sm font-bold text-primary w-14 md:w-full">
               Apply coupon
             </h4>
           </div>
           <div>
-            <h4 className="py-[68px] font-dm text-base font-bold text-primary">
+            <h4 className="xl:py-[68px] font-dm text-sm md:text-base font-bold text-primary">
               Update cart
             </h4>
           </div>
