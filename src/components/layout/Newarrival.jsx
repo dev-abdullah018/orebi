@@ -5,8 +5,7 @@ import Product from "./Product";
 import Slider from "react-slick";
 import SampleNextArrow from "./SampleNextArrow";
 import SamplePrevArrow from "./SamplePrevArrow";
-import newArrival from "../../data/productData";
-
+import { newArrivals } from "../../data/homeData";
 
 const Newarrival = () => {
   const settings = {
@@ -16,14 +15,14 @@ const Newarrival = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow/>,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 991,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          arrows:false
+          arrows: false,
         },
       },
       {
@@ -31,7 +30,7 @@ const Newarrival = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          arrows:false
+          arrows: false,
         },
       },
       {
@@ -49,9 +48,9 @@ const Newarrival = () => {
       <div className="mt-5 md:mt-32">
         <Container>
           <Heading title="New Arrivals" />
-           <Slider {...settings} >
-             {newArrival.map((item, index) => (
-                <Product key={index} src={item.image} badge={true}  />
+          <Slider {...settings}>
+            {newArrivals.map((item, index) => (
+              <Product key={index} src={item.image} title={item.title} badge={item.badge} />
             ))}
           </Slider>
         </Container>
@@ -61,8 +60,3 @@ const Newarrival = () => {
 };
 
 export default Newarrival;
-
-
-// <div className="sm:max-w-[300px] md:max-lg:max-w-[345px] lg:max-w-[370px]">
-//               <Product src={P1} badge={true} />
-//             </div>

@@ -3,7 +3,7 @@ import Container from "./Container";
 import Heading from "./Heading";
 import Product from "./Product";
 import Slider from "react-slick";
-import newArrival from "../../data/productData";
+import { bestSellers } from "../../data/homeData";
 
 const Bestseller = () => {
   const settings = {
@@ -44,8 +44,8 @@ const Bestseller = () => {
         <Container>
           <Heading title="Our Bestsellers" />
           <Slider {...settings}>
-            {newArrival.map((item, index) => (
-              <Product key={index} src={item.image} badge={true} />
+            {bestSellers.map((item, index) => (
+              <Product key={index} src={item.image} title={item.title} badge={item.badge} />
             ))}
           </Slider>
         </Container>

@@ -99,6 +99,7 @@ const Header = () => {
               {userDropDownShow && (
                 <List className="absolute right-0 top-8 w-[200px] border border-solid border-[#F0F0F0] bg-white text-center font-dm text-sm font-normal text-primary">
                   <ListItem
+                    href="/account"
                     itemname="My Account"
                     className="border-#F0F0F0] border-b border-solid px-5 py-4 duration-100 ease-in hover:bg-primary hover:font-bold hover:text-white"
                   />
@@ -139,7 +140,7 @@ const Header = () => {
                       </h4>
                       <div className="flex gap-x-[18px]">
                       <Link
-                        to="#"
+                        to="/cart"
                         className="mt-3 inline-block border border-solid border-primary px-10 py-4 font-dm text-sm font-bold"
                       >
                         View Cart

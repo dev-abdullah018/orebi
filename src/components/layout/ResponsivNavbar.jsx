@@ -44,10 +44,10 @@ const ResponsiveNavbar = () => {
             />
             {show && (
               <List className='mt-5'>
-                <ListItem className='font-dm text-sm font-normal hover:font-bold my-2.5' itemname="Home" />
-                <ListItem className='font-dm text-sm font-normal hover:font-bold my-2.5' itemname="Shop"/>
-                <ListItem className='font-dm text-sm font-normal hover:font-bold my-2.5' itemname="About"/>
-                <ListItem className='font-dm text-sm font-normal hover:font-bold my-2.5' itemname="Contacts"/>
+                <ListItem href="/" className='font-dm text-sm font-normal hover:font-bold my-2.5' itemname="Home" />
+                <ListItem href="/product" className='font-dm text-sm font-normal hover:font-bold my-2.5' itemname="Shop"/>
+                <ListItem href="/about" className='font-dm text-sm font-normal hover:font-bold my-2.5' itemname="About"/>
+                <ListItem href="/contacts" className='font-dm text-sm font-normal hover:font-bold my-2.5' itemname="Contacts"/>
                 <ListItem className='font-dm text-sm font-normal hover:font-bold my-2.5' itemname="Journal"/>
               </List>
             )}

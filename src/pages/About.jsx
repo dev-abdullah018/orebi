@@ -3,7 +3,8 @@ import Breadcrumb from '../components/layout/Breadcrumb';
 import Container from '../components/layout/Container';
 import Flex from '../components/layout/Flex';
 import Image from '../components/layout/Image';
-import aboutimg from "../assets/aboutimg.png"
+import aboutimg1 from "../assets/aboutimg1.png"
+import aboutimg2 from "../assets/aboutimg2.png"
 import { Link } from 'react-router-dom';
 
 const About = () => {
@@ -13,12 +14,12 @@ const About = () => {
        <Flex className="sm:flex sm:gap-x-10">
            <div className='sm:w-2/4'>
             <Link to="#">
-            <Image src={aboutimg} className="w-full"/>
+            <Image src={aboutimg1} className="w-full"/>
             </Link>
            </div>
            <div className='sm:w-2/4 mt-10 sm:mt-0'>
            <Link to="#">
-            <Image src={aboutimg} className="w-full"/>
+            <Image src={aboutimg2} className="w-full"/>
            </Link>
            </div>
        </Flex>

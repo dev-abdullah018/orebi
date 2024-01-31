@@ -19,10 +19,10 @@ const Navbar = () => {
             </div>
             <div className="w-9/12">
                 <List className='flex justify-end gap-x-10'>
-                  <ListItem className='font-dm text-sm font-normal hover:font-bold' itemname="Home" />
-                  <ListItem className='font-dm text-sm font-normal hover:font-bold' itemname="Shop"/>
-                  <ListItem className='font-dm text-sm font-normal hover:font-bold' itemname="About"/>
-                  <ListItem className='font-dm text-sm font-normal hover:font-bold' itemname="Contacts"/>
+                  <ListItem href="/" className='font-dm text-sm font-normal hover:font-bold' itemname="Home" />
+                  <ListItem href="/product" className='font-dm text-sm font-normal hover:font-bold' itemname="Shop"/>
+                  <ListItem href="/about" className='font-dm text-sm font-normal hover:font-bold' itemname="About"/>
+                  <ListItem href="contacts" className='font-dm text-sm font-normal hover:font-bold' itemname="Contacts"/>
                   <ListItem className='font-dm text-sm font-normal hover:font-bold' itemname="Journal"/>
                 </List>
             </div>

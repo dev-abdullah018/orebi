@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import Product from "./Product";
-import P1 from "../../assets/p1.png";
+import shopData from "../../data/shopData";
 
-const items = [...Array(120).keys()];
 
 function Items({ currentItems }) {
   return (
     <>
       {currentItems && currentItems.map((item,index) => (
-          <div className="md:w-[49%] lg:w-[32%]">
-            <Product key={index} src={P1} badge={true} />
+          <div key={index} className="md:w-[49%] lg:w-[32%] mb-4">
+            <Product key={index} src={item.image} title={item.title} badge={item.badge}/>
           </div>
         ))}
     </>
@@ -20,11 +19,11 @@ function Items({ currentItems }) {
 const Pagination = ({ itemsPerPage }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
-  const currentItems = items.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(items.length / itemsPerPage);
+  const currentItems = shopData.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(shopData.length / itemsPerPage);
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % items.length;
+    const newOffset = (event.selected * itemsPerPage) % shopData.length;
     setItemOffset(newOffset);
   };
 
@@ -51,10 +50,13 @@ const Pagination = ({ itemsPerPage }) => {
         activeClassName="inline-block border border-solid border-[#F0F0F0] py-2 px-3.5 font-dm font-normal text-sm text-white bg-black"
       />
       <p className="lg:absolute lg:bottom-0 lg:right-0 mt-2.5 lg:mt-0 font-dm text-sm font-normal text-[#767676]">
-        Products from {itemOffset} to {itemOffset + itemsPerPage} of {items.length}
+        Products from {itemOffset} to {itemOffset + itemsPerPage} of {shopData.length}
       </p>
     </>
   );
 };
 
 export default Pagination;
+
+
+
